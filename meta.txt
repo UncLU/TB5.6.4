@@ -1,0 +1,9 @@
+#cloud-config
+users:
+  - name: unclelu
+    groups: sudo
+    shell: /bin/bash
+    sudo: 'ALL=(ALL) NOPASSWD:ALL'
+    ssh-authorized-keys:
+	ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPbY23UieZp7ZttmCSDTaHHf1cmuVpuQc33Phvpx6iR2 uvarov-lv@ya.ru
+	ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHE9T54vv06VyCtIGxjmSobw/X9KB5/HKi2B9tAqi1Hg unclelu

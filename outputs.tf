@@ -13,3 +13,8 @@ output "internal_ip_address_vm_2" {
 output "external_ip_address_vm_2" {
   value = module.ya_instance_2.external_ip_address_vm
 }
+
+#output "load_balancer_public_ip" {
+#  description = "Public IP address of load balancer"
+#  value       = yandex_lb_network_load_balancer.base_load_balancer.listener.*.external_address_spec[0].*.address
+#}

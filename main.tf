@@ -25,16 +25,22 @@ terraform {
 }
 
 provider "yandex" {
-  service_account_key_file = "/home/unclelu/Documents/LearningDevOps/ModuleB5/TaskB5.7/work/bucketdir/sa.json"
+  service_account_key_file = "/home/unclelu/Documents/LearningDevOps/ModuleB5/TaskB5.7/TB5.6.4/sa.json"
   #  token     = var.token
   cloud_id  = var.cloud_id
   folder_id = var.folder_id
   zone      = var.zone
 }
 
+
 resource "yandex_vpc_network" "network" {
   name = "network"
 }
+
+#resource "yandex_vpc_network" "network-b" {
+#  name = "networ-b"
+#}
+
 
 resource "yandex_vpc_subnet" "suba" {
   name           = "suba"
@@ -45,7 +51,7 @@ resource "yandex_vpc_subnet" "suba" {
 
 resource "yandex_vpc_subnet" "subb" {
   name           = "subb"
-  zone           = "ru-central1-b"
+  zone           = "ru-central1-a"
   network_id     = yandex_vpc_network.network.id
   v4_cidr_blocks = ["192.168.11.0/24"]
 }
